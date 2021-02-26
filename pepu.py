@@ -6,9 +6,25 @@ def main():
     attendees = [
         "Person1",
         "Person2",
-        "Person3"
+        "Person3",
+        "Person4",
+        "Person5",
+        "Person6"
     ]
 
+    phrases = [
+        "Seuraavaksi putoaa...",
+        "Nyt tipahtaa...",
+        "Sitten tippuu...",
+        "Tänä perjantaina pulloa ei saa..."
+    ]
+
+    def popNext():
+        time.sleep(2)
+        print(random.choice(phrases) + "\n")
+        time.sleep(3)
+        print(attendees.pop() + "\n")
+    
     random.shuffle(attendees)
 
     print("\n" + "Aloitetaan arvonta.")
@@ -31,10 +47,7 @@ def main():
             random.shuffle(attendees)
             time.sleep(6)
             print("\n" + "Jatketaan arvontaa!" + "\n")
-            time.sleep(2)
-            print("Seuraava putoaja on..." + "\n")
-            time.sleep(2)
-            print(attendees.pop() + "\n")
+            popNext()
 
         elif len(attendees) == 2:
             time.sleep(2)
@@ -58,10 +71,7 @@ def main():
             print("Onnea voittajalle!" + "\n")
 
         else:
-            time.sleep(2)
-            print("Seuraavana putoaa..." + "\n")
-            time.sleep(3)
-            print(attendees.pop() + "\n")
+            popNext()
 
 
 if __name__ == "__main__":
