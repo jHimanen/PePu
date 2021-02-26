@@ -6,17 +6,18 @@ def main():
     attendees = [
         "Person1",
         "Person2",
-        "Person3",
-        "Person4",
-        "Person5",
-        "Person6"
+        "Person3"
     ]
 
     phrases = [
         "Seuraavaksi putoaa...",
         "Nyt tipahtaa...",
         "Sitten tippuu...",
-        "Tänä perjantaina pulloa ei saa..."
+        "Tänä perjantaina pulloa ei saa...",
+        "Seuraavan henkilön ryysvuori ei kasva...",
+        "Seuraavan henkilön pää menee tyynyyn...",
+        "Mount Everyystiä ei valloita...",
+        "Veitsensä pakkaa..."
     ]
 
     def popNext():
@@ -27,7 +28,7 @@ def main():
     
     random.shuffle(attendees)
 
-    print("\n" + "Aloitetaan arvonta.")
+    print("\n" + "Aloitetaan arvonta. Osallistujia on " + str(len(attendees)) + ".")
     time.sleep(3)
     print("\n" + "Ensimmäisenä putoaa..." + "\n")
     time.sleep(3)
@@ -60,6 +61,8 @@ def main():
             print("\n" + "Jännitys tiivistyy..." + "\n")
             time.sleep(2)
             print("Rumpujen pärinää..." + "\n")
+            time.sleep(2)
+            print("Ryys vuori kasvaa..." + "\n")
             time.sleep(3)
             print("Tämän perjantaipullon voittaa....." + "\n")
             
